@@ -46,6 +46,7 @@ module.exports = {
     // css関係プラグイン追加
     'gatsby-plugin-sass',
     'gatsby-plugin-postcss',
+/*
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
@@ -58,6 +59,7 @@ module.exports = {
         ignore: [],              // 削除しないファイルを指定
       }
     },
+*/
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

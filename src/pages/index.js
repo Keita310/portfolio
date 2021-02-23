@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <h1>Hi people</h1>
@@ -16,7 +16,30 @@ const IndexPage = () => (
     </div>
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+
+    {data.allMicrocmsSkill.edges.map(edge => {
+//      const skill = edge.node
+      const skillName = edge.node.name
+      console.log('skillName:' + skillName)
+
+    })}
   </Layout>
 )
+
+export const query = graphql`
+  {
+    allMicrocmsSkill(
+      sort: { fields: [createdAt], order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+`
+
 
 export default IndexPage

@@ -1,3 +1,29 @@
+## npmでインストールしたもの
+
+```
+// microcmsライブラリ
+gatsby-source-microcms
+
+// sass
+node-sass
+gatsby-plugin-sass
+
+// bootstrap
+react-bootstrap
+bootstrap
+
+// tailwind
+gatsby-plugin-postcss@3.0.0
+gatsby-plugin-purgecss
+tailwindcss@1.9.6
+
+// fontawesome
+@fortawesome/fontawesome-svg-core
+@fortawesome/free-regular-svg-icons
+@fortawesome/free-solid-svg-icons
+@fortawesome/react-fontawesome
+```
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">

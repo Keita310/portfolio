@@ -11,29 +11,26 @@ const path = require('path')
 // 動的に生成したいページをgraphqlで取得し、createPageでページ生成する
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const postTemplate = path.resolve('./src/templates/post.jsx')
+  const template = path.resolve('./src/templates/work.jsx')
   const result = await graphql(`
     {
-      allMicrocmsSkill(
-        sort: { fields: [createdAt], order: DESC }
-      ) {
+      allMicrocmsWorks {
         edges {
           node {
-            id
-            name
+            worksId
           }
         }
       }
     }
   `)
 
-  result.data.allMicrocmsSkill.edges.forEach(edge => {
-    const node = edge.node
+  result.data.allMicrocmsWorks.edges.forEach(edge => {
+    const work = edge.node
     createPage({
-      path: '/post/' + node.name,
-      component: postTemplate,
+      path: '/works/' + work.worksId,
+      component: template,
       context: {
-        name: node.name
+        id: work.worksId
       }
     })
   })

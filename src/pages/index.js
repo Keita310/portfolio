@@ -1,45 +1,17 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
 
-    {data.allMicrocmsSkill.edges.map(edge => {
-//      const skill = edge.node
-      const skillName = edge.node.name
-      console.log('skillName:' + skillName)
-
-    })}
   </Layout>
 )
-
-export const query = graphql`
-  {
-    allMicrocmsSkill(
-      sort: { fields: [createdAt], order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          name
-        }
-      }
-    }
-  }
-`
-
 
 export default IndexPage

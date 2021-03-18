@@ -38,7 +38,10 @@ module.exports = {
         serviceId: process.env.GATSBY_MICROCMS_SERVICE_ID,
         apis: [
           {
-            endpoint: `skill`,
+            endpoint: `skill_category`,
+          },
+          {
+            endpoint: `works`,
           },
         ],
       },

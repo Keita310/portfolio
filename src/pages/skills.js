@@ -2,6 +2,7 @@ import React from "react"
 import {graphql} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ExternalImage from "../components/external-image"
 
 const Skills = ({ data }) => (
   <Layout>
@@ -17,7 +18,7 @@ const Skills = ({ data }) => (
              {category.skills.map(skill => (
                <div key={skill.id}>
                  <span>{skill.name}</span>
-                 <img src={skill.icon.url} /><br />
+                 <ExternalImage url={skill.icon.url} />
                  <span>{skill.experience_type}</span>
                  <span>{skill.experience}</span>
                  <span>{skill.start_year}</span>

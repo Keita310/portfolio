@@ -45,6 +45,7 @@ const Contact = ({ location }) => {
       <h1>お問い合わせ</h1>
 
       <Form
+        netlify
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={onSubmit}

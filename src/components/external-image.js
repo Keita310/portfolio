@@ -1,6 +1,6 @@
-import React from 'react';
-import GatsbyImage from 'gatsby-image';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import GatsbyImage from 'gatsby-image'
+import { useStaticQuery, graphql } from 'gatsby'
 
 /**
  * node化した外部画像を表示するコンポーネント
@@ -32,12 +32,12 @@ export default ({ url }) => {
         }
       }
     `
-  );
+  )
 
   // nodeに対象画像がなかったらそのまま外部URLを使用する
   const target = data.allFile.edges.find(edge => edge.node.fields.link === url)
   if (target && target.node.childImageSharp) {
     return (<GatsbyImage resolutions={target.node.childImageSharp.resolutions} />)
   }
-  return (<img className="default" src={url} />)
-};
+  return (<img className="default" alt="" src={url} />)
+}

@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Sidebar from "./sidebar"
 // cssインポート
 import './../styles/tailwind.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './../styles/layout.scss'
 
 /*

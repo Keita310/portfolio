@@ -12,7 +12,7 @@ const Contact = ({ location }) => {
    'message': '',
    'subject': 'お問い合わせ',
    'form-name': 'contact',
-   'bot-field': true,
+   'bot-field': null,
  });
 
   const handleChange = event => {

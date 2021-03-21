@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Alert } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -10,7 +10,7 @@ const Contact = ({ location }) => {
    'name': '',
    'email': '',
    'message': '',
-   'subject': 'お問い合わせ',
+   'subject': '[portfolio]お問い合わせ',
    'form-name': 'contact',
  });
 
@@ -42,6 +42,8 @@ const Contact = ({ location }) => {
     <Layout location={location}>
       <SEO title="お問い合わせ" />
       <h1>お問い合わせ</h1>
+
+      <Alert variant="danger">お問い合わせ送信に失敗しました。</Alert>
 
       <Form
         name="contact"

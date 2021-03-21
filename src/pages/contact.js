@@ -51,6 +51,9 @@ const Contact = ({ location }) => {
         data-netlify-honeypot="bot-field"
         onSubmit={onSubmit}
       >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+
         <Form.Group controlId="name">
           <Form.Label>お名前</Form.Label>
           <Form.Control

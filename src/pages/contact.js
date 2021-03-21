@@ -73,6 +73,17 @@ const Contact = ({ location }) => {
           />
         </Form.Group>
 
+        <Form.Group controlId="subject" className="d-none">
+          <Form.Label>件名</Form.Label>
+          <Form.Control
+            name="subject"
+            type="text"
+            onChange={handleChange}
+            value={params.subject}
+            required
+          />
+        </Form.Group>
+
         <Form.Group controlId="message">
           <Form.Label>問い合わせ内容</Form.Label>
           <Form.Control

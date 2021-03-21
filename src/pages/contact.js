@@ -12,7 +12,6 @@ const Contact = ({ location }) => {
    'message': '',
    'subject': 'お問い合わせ',
    'form-name': 'contact',
-   'bot-field': null,
  });
 
   const handleChange = event => {
@@ -48,11 +47,9 @@ const Contact = ({ location }) => {
         netlify
         name="contact"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
         onSubmit={onSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
-        <input type="hidden" name="bot-field" />
 
         <Form.Group controlId="name">
           <Form.Label>お名前</Form.Label>

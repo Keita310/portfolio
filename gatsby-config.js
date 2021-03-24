@@ -3,9 +3,14 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `keita310 portfolio`,
-    description: `keita310のportfolioです`,
-    author: `keita310`,
+    title: `Keita310 portfolio`,
+    description: `Keita310のportfolioです`,
+    author: `Keita310`,
+    urls: {
+      qiita: `https://qiita.com/Keita310`,
+      github: `https://github.com/Keita310`,
+      twitter: `https://twitter.com/_Keita310`,
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

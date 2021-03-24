@@ -1,0 +1,157 @@
+// Text
+// --------------------------
+// fontawesome利用部
+@mixin fa($code) {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: normal;
+    content: unquote('"') + $code + unquote('"'); //こうしないと文字化けするので注意
+}
+
+// svg版
+$faSvg: '.svg-inline--fa';
+$faBeforeSvg: '.svg-inline--fa[data-fa-pseudo-element=":before"]';
+
+@mixin faBeforeSvg($code, $weight: Solid) {
+    &::before {
+        display: none;
+        font-family: 'Font Awesome 5 ' + $weight;
+        content: unquote('"') + $code + unquote('"'); //こうしないと文字化けするので注意
+    }
+}
+
+// CSS版
+$fa: '.fa, .fas, .far, .fal, .fab';
+$faBefore: '&::before';
+
+@mixin faBefore($code, $weight: Solid) {
+    @if $weight == Solid {
+        $weight: bold;
+    }
+    @else if $weight == Regular {
+        $weight: normal;
+    }
+
+    #{$faBefore} {
+        @include fa($code);
+    }
+}
+
+// 複数行の三点リーダー
+@mixin textclamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+
+// Design
+// --------------------------
+// box-shadow
+@mixin boxShadow {
+    box-shadow: 0 2px 14px rgba($color-font-base, .1);
+}
+
+// box-shadow_bottom
+@mixin boxShadowBottom {
+    box-shadow: 0 8px 16px 0 rgba($color-font-base, .1);
+}
+
+// 丸
+@mixin circle($font-size:1rem, $color: #fff, $bgcolor:rgba($color-font-gray, .8)) {
+    @include flex(row, nowrap, center, center);
+    display: inline-flex;
+    border-radius: 50%;
+    width: $font-size * 2;
+    min-width: $font-size * 2;
+    height: $font-size * 2;
+    font-size: $font-size;
+    color: $color;
+    background-color: $bgcolor;
+}
+
+// 正方形
+@mixin rect {
+    @include flex(column, nowrap, center, center);
+    width: 100%;
+    padding-top: 100%; //正方形を作る
+}
+
+// オレンジ->黄色のグラデーション
+@mixin gradientOrange {
+    background: -webkit-linear-gradient(45deg, $orange 10%, $yellow 90%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, $orange 10%, $yellow 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+// オーバーレイ
+@mixin overlay($background-color:rgba($white, .85)) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $background-color;
+    transition: background-color .5s linear;
+    user-select: none;
+}
+
+
+// Layout
+// --------------------------
+// メディアクエリ
+$breakpoints: (
+    'md': 'screen and (max-width: 960px)',
+    'lg': 'screen and (min-width: 960px)',
+) !default;
+
+@mixin mq($breakpoint: lg) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// flex
+@mixin flex($direction:row, $wrap:nowrap, $content:flex-start, $align-items:flex-start) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $content;
+    align-items: $align-items;
+}
+
+// 背景白のコンテンツボックス
+@mixin box {
+    @include boxShadow;
+    padding: 2rem;
+    background: $white;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+// 内容を縮小表示
+@mixin shrink($scale: .8) {
+    transform-origin: 0 0;
+    transform: scale($scale);
+}
+
+
+// Form
+// --------------------------
+// 必須・任意バッヂ
+@mixin badgeSmall {
+    @extend .badge;
+    @extend .rounded-pill;
+    font-weight: normal;
+    font-size: 0.6rem;
+    vertical-align: middle;
+}
+
+@mixin hover() {
+    transition: all .2s ease;
+
+    &:hover {
+        opacity: .8;
+    }
+}

@@ -9,7 +9,7 @@ import PropTypes from "prop-types"
 import { Container, Row, Col } from 'react-bootstrap'
 import Sidebar from "./sidebar"
 // cssインポート
-//import './../styles/tailwind.css'
+import './../styles/tailwind.css'
 //import 'bootstrap/dist/css/bootstrap.min.css'
 import './../styles/layout.scss'
 

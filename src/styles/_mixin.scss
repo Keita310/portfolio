@@ -113,14 +113,6 @@ $breakpoints: (
     }
 }
 
-// flex
-@mixin flex($direction:row, $wrap:nowrap, $content:flex-start, $align-items:flex-start) {
-    display: flex;
-    flex-flow: $direction $wrap;
-    justify-content: $content;
-    align-items: $align-items;
-}
-
 // 背景白のコンテンツボックス
 @mixin box {
     @include boxShadow;
@@ -136,17 +128,6 @@ $breakpoints: (
     transform: scale($scale);
 }
 
-
-// Form
-// --------------------------
-// 必須・任意バッヂ
-@mixin badgeSmall {
-    @extend .badge;
-    @extend .rounded-pill;
-    font-weight: normal;
-    font-size: 0.6rem;
-    vertical-align: middle;
-}
 
 @mixin hover() {
     transition: all .2s ease;

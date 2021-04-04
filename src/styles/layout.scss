@@ -1,5 +1,9 @@
-@import 'tailwind.css';
+$sizes: (
+  "33": 33.33333333%,
+);
+
 @import '~bootstrap/scss/bootstrap';
+@import 'tailwind.css';
 @import 'variables';
 @import 'mixin';
 
@@ -85,3 +89,54 @@ a:focus,
     }
   }
 }
+
+// レベルスター
+.skill-star {
+  path {
+    color: $yellow;
+  }
+}
+
+// スキル一枠
+.skill-box {
+  .content {
+    min-height: 10rem;
+    font-size: .9rem;
+
+    p, span {
+      font-size: inherit;
+    }
+  }
+}
+
+// アイキャッチ
+.eyecatch {
+  position: relative;
+
+  h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    background: linear-gradient(to right, transparent, $main-key-color 0, $main-key-color 30%, transparent);
+    color: #fff;
+    padding: .7rem 1rem;
+    min-width: 300px;
+    opacity: .8;
+
+    background: #fff;
+    width: 100%;
+    left: 0;
+    color: #444;
+  }
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #777;
+  margin: 4rem auto 1rem;
+}
+
+

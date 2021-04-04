@@ -8,6 +8,9 @@ export default ({data}) => {
   return (
     <Layout>
       <div>{work.name}</div>
+      <div dangerouslySetInnerHTML={{
+        __html: work.content
+      }}></div>
     </Layout>
   )
 }

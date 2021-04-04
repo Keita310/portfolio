@@ -32,7 +32,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // microcmsの設定追記
@@ -42,6 +42,8 @@ module.exports = {
         apiKey: process.env.GATSBY_MICROCMS_APIKEY,
         serviceId: process.env.GATSBY_MICROCMS_SERVICE_ID,
         apis: [
+// object形式だとビルドできない不具合あり
+//          {endpoint: `profile`},
           {endpoint: `skill`},
           {endpoint: `skill_category`},
           {endpoint: `works`},

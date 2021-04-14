@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
         <Row>
           <div className="d-flex">
             <Sidebar />
-            <Col>{children}</Col>
+            <Col className="p-4">{children}</Col>
           </div>
         </Row>
       </Container>

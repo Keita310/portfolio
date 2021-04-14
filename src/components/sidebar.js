@@ -21,8 +21,8 @@ const Sidebar = () => {
   const meta = data.site.siteMetadata;
 
   return (
-    <nav className="sidebar">
-      <div className="logo">
+    <nav className="sidebar p-4">
+      <div className="logo pb-4">
         <Link to="/">
           <Image filename="logo.png" alt={meta.title} />
         </Link>

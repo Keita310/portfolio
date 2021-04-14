@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Form, Button } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from "../components/image"
 
 const Contact = ({ location }) => {
 
@@ -167,7 +168,11 @@ const Contact = ({ location }) => {
   return (
     <Layout location={location}>
       <SEO title="お問い合わせ" />
-      <h1>お問い合わせ</h1>
+      <div className="eyecatch">
+        <h1 className="opacity-70">お問い合わせ</h1>
+        <Image filename="works_bg.png" alt="お問い合わせ" />
+      </div>
+
       <Form
         name="contact"
         data-netlify="true"

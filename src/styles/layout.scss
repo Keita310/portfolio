@@ -170,6 +170,11 @@ h2 {
     margin: 0 auto;
   }
 
+  .gatsby-image-wrapper {
+    width: auto !important;
+    height: auto !important;
+  }
+
   .pc-wrap {
     width: 92%;
     height: 100%;
@@ -182,9 +187,6 @@ h2 {
       height: 73%;
       overflow: hidden;
 //      border: 1px solid red;
-      img {
-        width: 100%;
-      }
     }
 
     &::before {
@@ -225,9 +227,6 @@ h2 {
       height: 89%;
       overflow: hidden;
 //      border: 1px solid red;
-      img {
-        width: 100%;
-      }
     }
   }
 }

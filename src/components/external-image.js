@@ -9,6 +9,17 @@ import { useStaticQuery, graphql } from 'gatsby'
  *
  */
 export default ({ url }) => {
+
+  // nullは空で返す
+  if (url === null) {
+    return '';
+  }
+
+  // urlがオブジェクトだったら
+  if (url.url !== undefined) {
+    url = url.url
+  }
+
   const data = useStaticQuery(
     graphql`
       query {

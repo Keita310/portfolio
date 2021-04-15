@@ -37,7 +37,7 @@ export default ({data}) => {
       </div>
 
       <div className="work-title">
-        <p>{work.catch_copy}</p>
+        <span className="text-secondary">{work.catch_copy}</span>
         <h1>{work.name}</h1>
       </div>
 
@@ -74,7 +74,7 @@ export default ({data}) => {
       </dl>
 
       {/* 本文 */}
-      <div dangerouslySetInnerHTML={{
+      <div className="work-content" dangerouslySetInnerHTML={{
         __html: work.content
       }}></div>
     </Layout>

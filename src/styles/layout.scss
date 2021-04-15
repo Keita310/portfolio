@@ -34,11 +34,11 @@ a {
   &:active,
   &:link,
   &:visited {
-    color: inherit;
+    color: $sub2-key-color;
   }
 
   &:hover {
-    color: $main-key-color;
+    opacity: .7;
     text-decoration: inherit;
   }
 }
@@ -69,9 +69,10 @@ a:focus,
       display: block;
       border-bottom: 1px solid #ccc;
       text-align: center;
+      color: $color-font-base;
 
       &:hover {
-        color: $color-font-base;
+        color: inherit;
         background: #f3f3f3;
       }
     }
@@ -116,8 +117,13 @@ a:focus,
 
   .content {
     margin-top: .5rem;
-//    border-top: 1px solid #ccc;
     min-height: 19rem;
+
+    .card-text {
+      p {
+        font-size: .9rem;
+      }
+    }
   }
 }
 
@@ -150,12 +156,38 @@ a:focus,
 }
 
 h2 {
-  border-bottom: 1px solid #ccc;
+  position: relative;
   font-size: 1.5rem;
-  padding: 1rem 0;
-  color: #777;
   margin: 4rem auto 1rem;
+  background: $main-key-color;
+  padding: 1rem;
+  color: #fff;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid #fff;
+  }
+
 }
+
+h3 {
+  font-size: 1.3rem;
+  border-left: 12px double $main-key-color;
+  padding: .6rem .6rem;
+  margin: 2rem auto 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ccc;
+  padding: .4rem 1rem;
+  margin: 2rem auto 1rem;
+}
+
 
 // 実績用アイキャッチ
 .work-eyecatch {
@@ -239,28 +271,41 @@ h2 {
   margin-bottom: 2rem;
   padding: 2rem 0;
 
-  p,
+  span,
   h1 {
     margin: 0;
   }
 }
 
 .work-description {
-  padding: 1rem;
-  background: #f0f0f0;
+  p {
+    margin: 0;
+  }
+}
+
+// 本文
+.work-content {
+  p,
+  ul {
+    padding: 0 1rem 1rem;
+  }
 }
 
 // 実績詳細テーブル
 .detail-table {
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid #ccc;
+//  border-top: 1px solid #ccc;
 
   dt {
     width: 200px;
     margin: 0;
     padding: 1rem;
     border-bottom: 1px solid #ccc;
+
+    &:last-of-type {
+      border: 0;
+    }
   }
 
   dd {
@@ -269,5 +314,8 @@ h2 {
     padding: 1rem;
     border-bottom: 1px solid #ccc;
 
+    &:last-of-type {
+      border: 0;
+    }
   }
 }

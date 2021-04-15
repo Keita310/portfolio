@@ -28,9 +28,9 @@ const Works = ({ data }) => (
              <div className="card-body bg-light content">
                <div className="card-title font-weight-bold text-lg">{work.name}</div>
 
-               <p className="card-text text-sm" dangerouslySetInnerHTML={{
+               <div className="card-text" dangerouslySetInnerHTML={{
                  __html: work.description
-               }}></p>
+               }}></div>
                {/*<p className="card-text text-sm">{work.catch_copy}</p>*/}
              </div>
            </Link>

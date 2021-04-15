@@ -16,13 +16,21 @@ export default ({data}) => {
           <div className="pc-wrap">
             <Image filename="pc_wrap.png" alt="" />
             <div className="pc-eyecatch">
-              <img src={work.pc_eyecatch} alt={work.name} />
+              <ExternalImage
+                url={work.pc_eyecatch}
+                alt={work.name}
+                default={true}
+              />
             </div>
           </div>
           <div className="sp-wrap">
             <Image filename="sp_wrap.png" alt="" />
             <div className="sp-eyecatch">
-              <img src={work.sp_eyecatch} alt={work.name} />
+              <ExternalImage
+                url={work.sp_eyecatch}
+                alt={work.name}
+                default={true}
+              />
             </div>
           </div>
         </div>

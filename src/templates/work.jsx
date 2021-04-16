@@ -68,7 +68,7 @@ export default ({data}) => {
         {work.release_date &&
           <>
             <dt>公開時期</dt>
-            <dd>{moment(work.release_date).format('YYYY/M/D')}〜</dd>
+            <dd>{moment(work.release_date).format('YYYY年M月')} 〜</dd>
           </>
         }
       </dl>

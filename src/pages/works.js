@@ -8,7 +8,6 @@ import ExternalImage from "../components/external-image"
 const Works = ({ data }) => (
   <Layout>
     <SEO title="実績" />
-    
     <div className="eyecatch">
       <h1>実績</h1>
       <Image filename="works_bg.png" alt="実績" />

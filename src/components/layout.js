@@ -22,9 +22,9 @@ const Layout = ({ children }) => {
     <>
       <Container fluid>
         <Row>
-          <div className="d-flex">
+          <div className="d-flex w-100">
             <Sidebar />
-            <Col className="p-4">{children}</Col>
+            <Col className="py-4 px-5">{children}</Col>
           </div>
         </Row>
       </Container>

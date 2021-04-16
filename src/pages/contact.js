@@ -97,6 +97,8 @@ const Contact = ({ location }) => {
         />
       </Form.Group>
 
+      <hr />
+
       <Button
         type="submit"
       >
@@ -121,6 +123,8 @@ const Contact = ({ location }) => {
         <div>{params.message}</div>
       </Form.Group>
 
+      <hr />
+
       <Button
         type="submit"
       >
@@ -132,14 +136,16 @@ const Contact = ({ location }) => {
   // 送信完了画面
   const finishHtml = (
     <>
-      完了しました
+      <b>送信完了しました。</b><br />
+      ご確認いたしますので、もうしばらくお待ちくださいませ。
     </>
   )
 
   // エラー画面
   const failHtml = (
     <>
-      送信失敗しました
+      <b>送信失敗しました</b><br />
+      しばらく経ってから再度お試しください。
     </>
   )
 
@@ -169,11 +175,12 @@ const Contact = ({ location }) => {
     <Layout location={location}>
       <SEO title="お問い合わせ" />
       <div className="eyecatch">
-        <h1 className="opacity-70">お問い合わせ</h1>
+        <h1>お問い合わせ</h1>
         <Image filename="works_bg.png" alt="お問い合わせ" />
       </div>
 
       <Form
+        className="py-5 contact-wrap"
         name="contact"
         data-netlify="true"
         data-netlify-honeypot="bot-field"

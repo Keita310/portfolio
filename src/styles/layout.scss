@@ -88,7 +88,7 @@ a:focus,
 // レベルスター
 .skill-star {
   path {
-    color: $yellow;
+    color: $sub2-key-color;
   }
 }
 
@@ -285,9 +285,38 @@ h4 {
 
 // 本文
 .work-content {
-  p,
-  ul {
+  p {
     padding: 0 1rem 1rem;
+  }
+
+  ul {
+    padding: 0 2.3rem 1rem;
+
+    li {
+      position: relative;
+      font-size: .9rem;
+
+      &::before {
+        color: $sub2-key-color;
+        content: "・";
+        font-size: 2.5rem;
+        position: absolute;
+        top: -1.3rem;
+        left: -2.3rem;
+      }
+    }
+  }
+
+  img {
+    padding: 6px;
+    border: 3px double #ccc;
+  }
+
+  pre {
+    margin: 0 1rem 1rem;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
   }
 }
 
@@ -319,3 +348,35 @@ h4 {
     }
   }
 }
+
+// お問い合わせ
+.contact-wrap {
+  .form-group {
+    margin-bottom: 2rem;
+    width: 50%;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  hr {
+    margin-top: 4rem;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  button {
+    background: $sub2-key-color !important;
+    border-color: $sub2-key-color !important;
+    transition: all .2s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+

@@ -42,8 +42,7 @@ module.exports = {
         apiKey: process.env.GATSBY_MICROCMS_APIKEY,
         serviceId: process.env.GATSBY_MICROCMS_SERVICE_ID,
         apis: [
-// object形式だとビルドできない不具合あり
-//          {endpoint: `profile`},
+          {endpoint: `profile`, format: 'object'},
           {endpoint: `skill`},
           {endpoint: `skill_category`},
           {endpoint: `works`},

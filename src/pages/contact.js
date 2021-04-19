@@ -176,7 +176,7 @@ const Contact = ({ location }) => {
       <SEO title="お問い合わせ" />
       <div className="eyecatch">
         <h1>お問い合わせ</h1>
-        <Image filename="works_bg.png" alt="お問い合わせ" />
+        <Image filename="contact_bg.png" alt="お問い合わせ" />
       </div>
 
       <Form

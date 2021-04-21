@@ -2,7 +2,7 @@ import React from "react"
 import {graphql} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-//import Image from "../components/image"
+import Image from "../components/image"
 import ExternalImage from "../components/external-image"
 
 const IndexPage = ({ data }) => {
@@ -11,40 +11,42 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="プロフィール" />
 
-      <div>
-        <ExternalImage
-          url={profile.eyecatch}
-        />
-        <div>
-          <span>{profile.sub_title}</span>
-          <h1>{profile.title}</h1>
+      <div className="profile-eyecatch">
+        <div className="image">
+          <Image filename="profile_bg.png" alt="プロフィール" />
         </div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: profile.description
-          }}
-        ></div>
+        <div className="text">
+          <span>- {profile.sub_title} -</span>
+          <h1>{profile.title}</h1>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: profile.description
+            }}
+          ></div>
+        </div>
       </div>
 
-      {profile.contents.map(content => {
-        return (
-          <div className="d-flex" key={content.title}>
-            <div>
-              <ExternalImage
-                url={content.image}
-              />
+      <div className="profile-contents">
+        {profile.contents.map(content => {
+          return (
+            <div key={content.title}>
+              <div className="image">
+                <ExternalImage
+                  url={content.image}
+                />
+              </div>
+              <div className="text">
+                <h2>{content.title}</h2>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: content.content
+                  }}
+                ></div>
+              </div>
             </div>
-            <div>
-              <h2>{content.title}</h2>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: content.content
-                }}
-              ></div>
-            </div>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </Layout>
   )
 }
@@ -62,9 +64,6 @@ export const query = graphql`
             content
           }
           description
-          eyecatch {
-            url
-          }
           sub_title
           title
         }

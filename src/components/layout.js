@@ -8,6 +8,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Container, Row, Col } from 'react-bootstrap'
 import Sidebar from "./sidebar"
+import Footer from "./footer"
 // cssインポート
 import './../styles/tailwind.css'
 //import 'bootstrap/dist/css/bootstrap.min.css'
@@ -24,7 +25,10 @@ const Layout = ({ children }) => {
         <Row>
           <div className="d-flex w-100">
             <Sidebar />
-            <Col className="py-4 px-5">{children}</Col>
+            <Col className="p-0">
+              <div className="py-4 px-5">{children}</div>
+              <Footer />
+            </Col>
           </div>
         </Row>
       </Container>

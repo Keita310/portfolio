@@ -85,6 +85,36 @@ a:focus,
   }
 }
 
+// フッター
+footer {
+  background: $main-key-color;
+  margin-top: 5rem;
+  padding: 0 3rem 1rem;
+
+  ul {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 3rem;
+      a {
+        color: #fff !important;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    color: #fff;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+  }
+}
+
 // レベルスター
 .skill-star {
   path {

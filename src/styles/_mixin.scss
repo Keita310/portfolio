@@ -44,14 +44,6 @@ $faBefore: '&::before';
     overflow: hidden;
 }
 
-
-// Design
-// --------------------------
-// box-shadow
-@mixin boxShadow {
-    box-shadow: 0 2px 14px rgba($color-font-base, .1);
-}
-
 // box-shadow_bottom
 @mixin boxShadowBottom {
     box-shadow: 0 8px 16px 0 rgba($color-font-base, .1);
@@ -111,15 +103,6 @@ $breakpoints: (
     @media #{map-get($breakpoints, $breakpoint)} {
         @content;
     }
-}
-
-// 背景白のコンテンツボックス
-@mixin box {
-    @include boxShadow;
-    padding: 2rem;
-    background: $white;
-    border-radius: .5rem;
-    overflow: hidden;
 }
 
 // 内容を縮小表示

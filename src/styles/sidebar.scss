@@ -1,0 +1,169 @@
+// レフトナビ
+.sidebar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  padding: 2rem;
+  background: $white;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba($color-font-base, .1);
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 100vh;
+
+  li {
+    a {
+      padding: 1rem 0;
+      display: block;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      color: $color-font-base;
+
+      &:hover {
+        color: inherit;
+        background: #f3f3f3;
+      }
+    }
+
+    &:first-child {
+      a {
+        border-top: 1px solid #ccc;
+      }
+    }
+  }
+
+  // ハンバーガーボタン
+  .toggle-btn {
+    position: relative;
+    width: 50px;
+    height: 44px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all .5s;
+    box-sizing: border-box;
+    z-index: 3;
+
+    span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #000;
+      border-radius: 4px;
+      display: inline-block;
+      transition: all .5s;
+      box-sizing: border-box;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2) {
+        top: 20px;
+      }
+
+      &:nth-child(3) {
+        bottom: 0px;
+      }
+    }
+  }
+
+  .mask {
+    display: none;
+    transition: all .5s;
+  }
+
+  .sp-fixed-header {
+    display: none;
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+      & ~ .sp-fixed-header {
+        .toggle-btn {
+          span {
+            background-color: #fff;
+
+            &:nth-child(1) {
+              -webkit-transform: translateY(20px) rotate(-45deg);
+              transform: translateY(20px) rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+              left: 200%;
+              opacity: 0;
+              -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+              -webkit-animation: active-btn06-bar02 .8s forwards;
+              animation: active-btn06-bar02 .8s forwards;
+            }
+
+            &:nth-child(3) {
+              -webkit-transform: translateY(-20px) rotate(45deg);
+              transform: translateY(-20px) rotate(45deg);
+            }
+
+            @-webkit-keyframes active-btn06-bar02 {
+              100% {
+                height: 0;
+              }
+            }
+
+            @keyframes active-btn06-bar02 {
+              100% {
+                height: 0;
+              }
+            }
+          }
+        }
+  
+        .mask {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: .8;
+          z-index: 2;
+          cursor: pointer;
+        }
+      }
+
+      & ~ .menu-wrap {
+        display: block !important;
+        position: relative;
+        z-index: 3;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background: $white;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+    .sp-fixed-header {
+      display: block;
+    }
+
+    .logo {
+       display: none;
+    }
+
+    .menu-wrap {
+       display: none;
+    }
+  }
+}

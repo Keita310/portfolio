@@ -20,11 +20,13 @@ const Sidebar = () => {
   const meta = data.site.siteMetadata;
 
   return (
-    <nav className="sidebar p-4">
+    <nav className="sidebar">
       {/* スマホハンバーガーメニュー */}
       <input type="checkbox" id="toggle_flag" />
       <div className="sp-fixed-header">
-        <div>{meta.title}</div>
+        <div>
+          <Link to="/">{meta.title}</Link>
+        </div>
         <label for="toggle_flag">
           <div className="toggle-btn">
             <span></span>

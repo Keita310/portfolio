@@ -1,0 +1,78 @@
+// フッター
+footer {
+  background: $main-key-color;
+  margin-top: 5rem;
+  padding: 0 3rem 1rem;
+
+  ul {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 2rem;
+      a {
+        color: #fff !important;
+
+        &:hover {
+          text-decoration: underline;
+          color: #fff !important;
+        }
+
+        * {
+          color: #fff !important;
+        }
+      }
+
+      .svg-inline--fa {
+        display: none;
+
+        path {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    color: #fff;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    ul {
+      li {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 0 .2rem 1.5rem;
+
+    ul {
+      padding: 1rem 0;
+      flex-direction: column;
+
+      li {
+        a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: .4rem 0;
+          border-bottom: 1px solid #fff;
+        }
+
+        &:last-of-type a {
+          border: 0;
+        }
+
+        .svg-inline--fa {
+          display: block;
+        }
+      }
+    }
+  }
+}

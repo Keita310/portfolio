@@ -3,11 +3,13 @@ $sizes: (
 );
 
 // @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import '~bootstrap/scss/bootstrap';
 @import 'tailwind.css';
 @import 'variables';
 @import 'mixin';
 @import 'sidebar';
+@import 'footer';
 
 * {
   margin: 0px;
@@ -49,33 +51,12 @@ a:focus,
   outline: none;
 }
 
-// フッター
-footer {
-  background: $main-key-color;
-  margin-top: 5rem;
-  padding: 0 3rem 1rem;
+// メインコンテンツエリア
+.contents-area {
+  padding: 1.5rem 3rem;
 
-  ul {
-    padding: 4rem 0;
-    display: flex;
-    justify-content: center;
-
-    li {
-      margin: 0 3rem;
-      a {
-        color: #fff !important;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  p {
-    text-align: center;
-    color: #fff;
-    font-size: .8rem;
-    letter-spacing: .1rem;
+  @media only screen and (max-width: 700px) {
+    padding: 1.5rem 1rem;
   }
 }
 
@@ -206,6 +187,7 @@ h4 {
     }
 
     h1 {
+      font-family: 'Roboto Condensed', sans-serif;
       font-size: 3rem;
       margin: 0;
     }

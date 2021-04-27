@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
         <Row>
           <Sidebar />
           <Col className="p-0">
-            <div className="py-4 px-5">{children}</div>
+            <div className="contents-area">{children}</div>
             <Footer />
           </Col>
         </Row>

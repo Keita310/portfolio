@@ -1,5 +1,6 @@
 // レフトナビ
 .sidebar {
+  $width: 280px;
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -9,7 +10,7 @@
   box-shadow: 0 2px 14px rgba($color-font-base, .1);
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: $width;
   height: 100vh;
 
   li {
@@ -80,10 +81,12 @@
     align-items: center;
     background: $main-key-color;
     padding: 1rem;
+    border-bottom: .5rem solid #fff;
 
     a {
+      font-family: 'Roboto Condensed', sans-serif;
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
     }
 
     label {
@@ -164,13 +167,12 @@
     padding: 0;
     background: $white;
     box-shadow: none;
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 100%;
     height: auto;
 
     & + div {
-      margin-top: 4rem;
+      margin-top: 6rem;
     }
 
     .sp-fixed-header {
@@ -182,13 +184,14 @@
     }
 
     .menu-wrap {
+      $offset: 30px;
       position: fixed;
       top: 0;
-      left: -300px;
+      left: -($width - $offset);
       bottom: 0;
       z-index: 3;
       opacity: 0;
-      width: 300px;
+      width: ($width - $offset);
       background: #ffffff;
       overflow-x: hidden;
       overflow-y: auto;

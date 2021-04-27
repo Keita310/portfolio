@@ -1,5 +1,7 @@
 import React from "react"
 import {useStaticQuery, graphql, Link} from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = () => {
   const { site } = useStaticQuery(
@@ -18,10 +20,30 @@ const Footer = () => {
   return (
     <footer>
       <ul>
-        <li><Link to="/">プロフィール</Link></li>
-        <li><Link to="/skills/">スキル</Link></li>
-        <li><Link to="/works/">実績</Link></li>
-        <li><Link to="/contact/">お問い合わせ</Link></li>
+        <li>
+          <Link to="/">
+            <span>プロフィール</span>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </Link>
+        </li>
+        <li>
+          <Link to="/skills/">
+            <span>スキル</span>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </Link>
+        </li>
+        <li>
+          <Link to="/works/">
+            <span>実績</span>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact/">
+            <span>お問い合わせ</span>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </Link>
+        </li>
       </ul>
       <p>Copyright &copy; {title} All Rights Reserved.</p>
     </footer>

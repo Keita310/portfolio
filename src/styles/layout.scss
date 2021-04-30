@@ -228,17 +228,28 @@ h4 {
     }
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 700px) {
+    margin-bottom: 6rem;
+
     .text {
+      top: 33%;
 
+      div {
+        margin: calc(30vw - 20%) -1rem 0;
 
-
+        * {
+          color: $color-font-base;
+          font-size: 1rem;
+          letter-spacing: 0;
+        }
+      }
     }
   }
 }
 
 // プロフィールの本文
 .profile-contents {
+  overflow: hidden;
   margin-bottom: 6rem;
 
   .image {
@@ -282,6 +293,51 @@ h4 {
         text-align: right;
         padding: 0 0 0 2rem;
       }
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .image {
+      width: 50%;
+      padding: 0 1rem 0 0;
+    }
+
+    .text {
+      width: 50%;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    & > div {
+      // 偶数板目
+      &:nth-child(even){
+        .image {
+          padding: 0 0 0 1rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .image {
+      width: 100%;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .text {
+      width: 100%;
+      padding: 2rem 6% 0;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    & > div {
+      display: block;
     }
   }
 }

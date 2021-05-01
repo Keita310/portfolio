@@ -1,0 +1,203 @@
+// 実績一枠
+.work-box {
+  width: 50%;
+  padding: 1rem;
+
+  .eyecatch-wrap {
+    overflow: hidden;
+    height: 200px;
+
+    img {
+      max-width: 500px;
+    }
+  }
+
+  .content {
+    margin-top: .5rem;
+    min-height: 19rem;
+
+    .card-text {
+      p {
+        font-size: .9rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 901px) and (max-width: 1100px) {
+    width: 100%;
+    padding: 1rem 0;
+
+    .content {
+      min-height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    padding: 1rem 0;
+
+    .content {
+      min-height: auto;
+    }
+  }
+}
+
+// 実績用アイキャッチ
+.work-eyecatch {
+  background: $sub2-key-color;
+  padding-top: 1rem;
+
+  .inner {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /*
+  .gatsby-image-wrapper {
+    width: auto !important;
+    height: auto !important;
+  }
+  */
+
+  .pc-wrap {
+    width: 92%;
+    height: 100%;
+
+    .pc-eyecatch {
+      position: absolute;
+      top: 9%;
+      left: 13%;
+      width: 66%;
+      height: 73%;
+      overflow: hidden;
+//      border: 1px solid red;
+    }
+
+    &::before {
+      position: absolute;
+      top: 7%;
+      left: 12%;
+      content: ' ';
+      background: #fff;
+      width: 69%;
+      height: 83%;
+      display: block;
+    }
+  }
+
+  .sp-wrap {
+    width: 28%;
+    height: 100%;
+    position: absolute;
+    top: 16%;
+    left: 70%;
+
+    &::before {
+      position: absolute;
+      top: 2%;
+      left: 6%;
+      content: ' ';
+      background: #fff;
+      width: 88%;
+      height: 95%;
+      display: block;
+    }
+
+    .sp-eyecatch {
+      position: absolute;
+      top: 7%;
+      left: 7%;
+      width: 86%;
+      height: 89%;
+      overflow: hidden;
+//      border: 1px solid red;
+    }
+  }
+}
+
+// 実績タイトル
+.work-title {
+  border-bottom: 2px dashed #ccc;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+
+  span,
+  h1 {
+    margin: 0;
+  }
+}
+
+.work-description {
+  p {
+    margin: 0;
+  }
+}
+
+// 本文
+.work-content {
+  p {
+    padding: 0 1rem 1rem;
+  }
+
+  ul {
+    padding: 0 2.3rem 1rem;
+
+    li {
+      position: relative;
+      font-size: .9rem;
+
+      &::before {
+        color: $sub2-key-color;
+        content: "・";
+        font-size: 2.5rem;
+        position: absolute;
+        top: -1.3rem;
+        left: -2.3rem;
+      }
+    }
+  }
+
+  img {
+    padding: 6px;
+    border: 3px double #ccc;
+  }
+
+  pre {
+    margin: 0 1rem 1rem;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+  }
+}
+
+// 実績詳細テーブル
+.detail-table {
+  display: flex;
+  flex-wrap: wrap;
+//  border-top: 1px solid #ccc;
+
+  dt {
+    width: 200px;
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+
+    &:last-of-type {
+      border: 0;
+    }
+  }
+
+  dd {
+    width: calc(100% - 200px);
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+
+    &:last-of-type {
+      border: 0;
+    }
+  }
+}

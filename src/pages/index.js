@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 import ExternalImage from "../components/external-image"
+import FooterNav from "../components/footer-nav"
 
 const IndexPage = ({ data }) => {
   const profile = data.allMicrocmsProfile.edges[0].node
@@ -47,6 +48,7 @@ const IndexPage = ({ data }) => {
           )
         })}
       </div>
+      <FooterNav prev="a" next="b" />
     </Layout>
   )
 }

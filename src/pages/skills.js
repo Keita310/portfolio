@@ -24,14 +24,14 @@ const Skills = ({ data }) => (
 
           <div className="d-flex flex-wrap">
             {category.skills.map(skill => (
-              <div className="skill-box w-33 p-3" key={skill.id}>
+              <div className="skill-box" key={skill.id}>
                 <div className="card">
-                  <div className="d-flex align-items-center border-bottom bg-light">
-                    <div className="p-2">
+                  <div className="d-flex align-items-center border-bottom bg-light p-2">
+                    <div className="icon">
                       <ExternalImage url={skill.icon.url} />
                     </div>
                     <div>
-                      <div className="font-weight-bold text-lg">{skill.name}</div>
+                      <div className="title">{skill.name}</div>
                       <div><SkillStar level={skill.level} /></div>
                       <div className="text-secondary">{skill.experience_type} {getYearsOfExperience(skill)}</div>
                     </div>

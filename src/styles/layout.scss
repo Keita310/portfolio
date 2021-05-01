@@ -10,6 +10,10 @@ $sizes: (
 @import 'mixin';
 @import 'sidebar';
 @import 'footer';
+@import 'index';
+@import 'works';
+@import 'skills';
+@import 'contact';
 
 * {
   margin: 0px;
@@ -60,73 +64,31 @@ a:focus,
   }
 }
 
-// レベルスター
-.skill-star {
-  path {
-    color: $sub2-key-color;
-  }
-}
-
-// スキル一枠
-.skill-box {
-  .content {
-    min-height: 10rem;
-    font-size: .9rem;
-
-    p, span {
-      font-size: inherit;
-    }
-  }
-}
-
-// 実績一枠
-.work-box {
-  .eyecatch-wrap {
-    overflow: hidden;
-    height: 200px;
-
-    img {
-      max-width: 500px;
-    }
-  }
-
-  .content {
-    margin-top: .5rem;
-    min-height: 19rem;
-
-    .card-text {
-      p {
-        font-size: .9rem;
-      }
-    }
-  }
-}
-
 // アイキャッチ
 .eyecatch {
   position: relative;
 
   h1 {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
     z-index: 1;
     font-size: 2rem;
 //    font-family: "Noto Sans JP";
-
 //    background: linear-gradient(to right, transparent, $main-key-color 0, $main-key-color 30%, transparent);
-    color: #fff;
-    padding: .7rem 1rem;
     min-width: 300px;
-//    opacity: .8;
     background: rgba(255, 255, 255, 0.8);
-//    background: #fff;
     width: 100%;
     left: 0;
-    bottom: 40px;
+    bottom: 9%;
     color: #444;
 //    box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.5);
     padding: 1.2rem 1rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 1.4rem;
+      padding: .7rem;
+    }
   }
 }
 
@@ -162,374 +124,3 @@ h4 {
   padding: .4rem 1rem;
   margin: 2rem auto 1rem;
 }
-
-
-// プロフィール用アイキャッチ
-.profile-eyecatch {
-  $letter-spacing: .5rem;
-
-  position: relative;
-
-  .text {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    z-index: 2;
-    padding: 0 7%;
-
-    * {
-      color: #fff;
-    }
-
-    span {
-      font-size: .8rem;
-      letter-spacing: $letter-spacing;
-    }
-
-    h1 {
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    div {
-      margin: 1.5rem 0 0;
-      * {
-        font-size: 1.2rem;
-        letter-spacing: $letter-spacing;
-      }
-    }
-  }
-
-  &::before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: #000;
-    opacity: .6;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    .text {
-      top: 10%;
-      padding: 0 3%;
-
-      div {
-        margin: 1rem 0 0;
-        * {
-          font-size: .9rem;
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-width: 700px) {
-    margin-bottom: 6rem;
-
-    .text {
-      top: 33%;
-
-      div {
-        margin: calc(30vw - 20%) -1rem 0;
-
-        * {
-          color: $color-font-base;
-          font-size: 1rem;
-          letter-spacing: 0;
-        }
-      }
-    }
-  }
-}
-
-// プロフィールの本文
-.profile-contents {
-  overflow: hidden;
-  margin-bottom: 6rem;
-
-  .image {
-//    display: flex;
-    width: 40%;
-    box-sizing: border-box;
-    padding: 0 2rem 0 0;
-
-    img {
-      display: inline-block;;
-    }
-  }
-
-  .text {
-    width: 60%;
-  }
-
-  h2 {
-    color: #333;
-    margin: 0 0 1.5rem;
-    padding: 0 0 .5rem;
-    background: none;
-    border: none;
-    font-size: 1.4rem;
-    border-bottom: 1px solid #ccc;
-
-    &::after {
-      content: none;
-    }
-  }
-
-  & > div {
-    display: flex;
-    margin-top: 6rem;
-
-    // 偶数板目
-    &:nth-child(even){
-      flex-direction: row-reverse;
-
-      .image {
-        text-align: right;
-        padding: 0 0 0 2rem;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 700px) {
-    .image {
-      width: 50%;
-      padding: 0 1rem 0 0;
-    }
-
-    .text {
-      width: 50%;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-    }
-
-    & > div {
-      // 偶数板目
-      &:nth-child(even){
-        .image {
-          padding: 0 0 0 1rem;
-        }
-      }
-    }
-  }
-
-  @media only screen and (max-width: 500px) {
-    .image {
-      width: 100%;
-      padding: 0 !important;
-      text-align: center !important;
-    }
-
-    .text {
-      width: 100%;
-      padding: 2rem 6% 0;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-    }
-
-    & > div {
-      display: block;
-    }
-  }
-}
-
-// 実績用アイキャッチ
-.work-eyecatch {
-  background: $sub2-key-color;
-  padding-top: 1rem;
-
-  .inner {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 1rem;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  /*
-  .gatsby-image-wrapper {
-    width: auto !important;
-    height: auto !important;
-  }
-  */
-
-  .pc-wrap {
-    width: 92%;
-    height: 100%;
-
-    .pc-eyecatch {
-      position: absolute;
-      top: 9%;
-      left: 13%;
-      width: 66%;
-      height: 73%;
-      overflow: hidden;
-//      border: 1px solid red;
-    }
-
-    &::before {
-      position: absolute;
-      top: 7%;
-      left: 12%;
-      content: ' ';
-      background: #fff;
-      width: 69%;
-      height: 83%;
-      display: block;
-    }
-  }
-
-  .sp-wrap {
-    width: 28%;
-    height: 100%;
-    position: absolute;
-    top: 16%;
-    left: 70%;
-
-    &::before {
-      position: absolute;
-      top: 2%;
-      left: 6%;
-      content: ' ';
-      background: #fff;
-      width: 88%;
-      height: 95%;
-      display: block;
-    }
-
-    .sp-eyecatch {
-      position: absolute;
-      top: 7%;
-      left: 7%;
-      width: 86%;
-      height: 89%;
-      overflow: hidden;
-//      border: 1px solid red;
-    }
-  }
-}
-
-// 実績タイトル
-.work-title {
-  border-bottom: 2px dashed #ccc;
-  margin-bottom: 2rem;
-  padding: 2rem 0;
-
-  span,
-  h1 {
-    margin: 0;
-  }
-}
-
-.work-description {
-  p {
-    margin: 0;
-  }
-}
-
-// 本文
-.work-content {
-  p {
-    padding: 0 1rem 1rem;
-  }
-
-  ul {
-    padding: 0 2.3rem 1rem;
-
-    li {
-      position: relative;
-      font-size: .9rem;
-
-      &::before {
-        color: $sub2-key-color;
-        content: "・";
-        font-size: 2.5rem;
-        position: absolute;
-        top: -1.3rem;
-        left: -2.3rem;
-      }
-    }
-  }
-
-  img {
-    padding: 6px;
-    border: 3px double #ccc;
-  }
-
-  pre {
-    margin: 0 1rem 1rem;
-    padding: 1rem;
-    background: #333;
-    color: #fff;
-  }
-}
-
-// 実績詳細テーブル
-.detail-table {
-  display: flex;
-  flex-wrap: wrap;
-//  border-top: 1px solid #ccc;
-
-  dt {
-    width: 200px;
-    margin: 0;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-
-    &:last-of-type {
-      border: 0;
-    }
-  }
-
-  dd {
-    width: calc(100% - 200px);
-    margin: 0;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-
-    &:last-of-type {
-      border: 0;
-    }
-  }
-}
-
-// お問い合わせ
-.contact-wrap {
-  .form-group {
-    margin-bottom: 2rem;
-    width: 50%;
-  }
-
-  .form-label {
-    font-weight: bold;
-  }
-
-  hr {
-    margin-top: 4rem;
-  }
-
-  textarea {
-    min-height: 150px;
-  }
-
-  button {
-    background: $sub2-key-color !important;
-    border-color: $sub2-key-color !important;
-    transition: all .2s ease;
-
-    &:hover {
-      opacity: .7;
-    }
-  }
-}
-
-

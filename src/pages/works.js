@@ -17,7 +17,7 @@ const Works = ({ data }) => (
     {data.allMicrocmsWorks.edges.map(edge => {
        const work = edge.node
        return (
-         <div className="w-50 p-3 work-box" key={work.worksId}>
+         <div className="work-box" key={work.worksId}>
            <Link className="card" to={'/works/' + work.worksId}>
              <div className="card-img-top eyecatch-wrap">
                <ExternalImage

@@ -1,0 +1,47 @@
+// お問い合わせ
+.contact-wrap {
+  .form-group {
+    margin-bottom: 2rem;
+    width: 50%;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  hr {
+    margin-top: 4rem;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  button {
+    background: $sub2-key-color !important;
+    border-color: $sub2-key-color !important;
+    transition: all .2s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  @media only screen and (min-width: 901px) and (max-width: 1100px) {
+    .form-group {
+      width: 75%;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .form-group {
+      width: 75%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .form-group {
+      width: 100%;
+    }
+  }
+}

@@ -5,8 +5,8 @@ import SEO from "../components/seo"
 import Image from "../components/image"
 import ExternalImage from "../components/external-image"
 
-const Works = ({ data }) => (
-  <Layout>
+const Works = ({ location, data }) => (
+  <Layout location={location}>
     <SEO title="実績" />
     <div className="eyecatch">
       <h1>実績</h1>

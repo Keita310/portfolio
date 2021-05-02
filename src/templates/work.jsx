@@ -5,11 +5,11 @@ import Image from "../components/image"
 import ExternalImage from "../components/external-image"
 const moment = require("moment")
 
-export default ({data}) => {
+export default ({ location, data }) => {
   const work = data.microcmsWorks
   console.log(work)
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={(work.sp_eyecatch) ? 'work-eyecatch' : 'work-eyecatch sp-none'}>
         <div className="inner">
           <div className="pc-wrap">

@@ -5,10 +5,10 @@ import SEO from "../components/seo"
 import Image from "../components/image"
 import ExternalImage from "../components/external-image"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ location, data }) => {
   const profile = data.allMicrocmsProfile.edges[0].node
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="プロフィール" />
 
       <div className="profile-eyecatch">

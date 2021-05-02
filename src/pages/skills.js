@@ -7,8 +7,8 @@ import ExternalImage from "../components/external-image"
 import SkillStar from "../components/skill-star"
 const moment = require("moment");
 
-const Skills = ({ data }) => (
-  <Layout>
+const Skills = ({ location, data }) => (
+  <Layout location={location}>
     <SEO title="スキル" />
 
     <div className="eyecatch">

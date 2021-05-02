@@ -1,5 +1,5 @@
 import React from 'react'
-import {useStaticQuery, graphql, Link} from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "../components/image"
 import ExternalImage from "../components/external-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -79,8 +79,8 @@ const image = function (url) {
  * フッター下回遊リンクコンポーネント
  *
  */
-export default (props) => {
-  const path = window.location.pathname
+export default ({ location }) => {
+  const path = location.pathname
   let links = null;
 
   // 実績の詳細ページの場合

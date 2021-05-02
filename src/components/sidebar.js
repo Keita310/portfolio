@@ -27,7 +27,7 @@ const Sidebar = () => {
         <div>
           <Link to="/">{meta.title}</Link>
         </div>
-        <label for="toggle_flag">
+        <label htmlFor="toggle_flag">
           <div className="toggle-btn">
             <span></span>
             <span></span>

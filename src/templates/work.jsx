@@ -3,15 +3,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import ExternalImage from "../components/external-image"
-const moment = require("moment");
+const moment = require("moment")
 
 export default ({data}) => {
   const work = data.microcmsWorks
   console.log(work)
   return (
     <Layout>
-
-      <div className="work-eyecatch">
+      <div className={(work.sp_eyecatch) ? 'work-eyecatch' : 'work-eyecatch sp-none'}>
         <div className="inner">
           <div className="pc-wrap">
             <Image filename="pc_wrap.png" alt="" />

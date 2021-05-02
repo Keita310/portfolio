@@ -116,6 +116,26 @@
 //      border: 1px solid red;
     }
   }
+
+  &.sp-none {
+    .pc-wrap {
+      width: 100%;
+      .pc-eyecatch {
+        top: 8%;
+        left: 14%;
+        width: 72%;
+        height: 73%;
+      }
+
+      &::before {
+        width: 76%;
+      }
+    }
+
+    .sp-wrap {
+      display: none;
+    }
+  }
 }
 
 // 実績タイトル

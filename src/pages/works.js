@@ -37,7 +37,6 @@ const Works = ({ data }) => (
        )
     })}
     </div>
-
   </Layout>
 )
 

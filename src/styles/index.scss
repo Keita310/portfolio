@@ -83,6 +83,14 @@
       }
     }
   }
+
+  @media only screen and (max-width: 500px) {
+    .text {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
 }
 
 // プロフィールの本文

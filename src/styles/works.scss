@@ -148,6 +148,12 @@
   h1 {
     margin: 0;
   }
+
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
 }
 
 .work-description {
@@ -215,9 +221,25 @@
     margin: 0;
     padding: 1rem;
     border-bottom: 1px solid #ccc;
+    overflow-wrap: break-word;
 
     &:last-of-type {
       border: 0;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    flex-direction: row;
+
+    dt {
+      width: 100%;
+      border: none;
+      padding: 1rem 1rem .3rem;
+    }
+
+    dd {
+      width: 100%;
+      padding: 0 1rem 1rem 2rem;
     }
   }
 }

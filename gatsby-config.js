@@ -66,6 +66,16 @@ module.exports = {
       }
     },
 */
+    // クロールの設定(全ページクロールさせない)
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: process.env.GATSBY_APP_URL + '/',
+        sitemap: process.env.GATSBY_APP_URL + '/sitemap.xml',
+        policy: [{ userAgent: '*', disallow: '/' }]
+      }
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

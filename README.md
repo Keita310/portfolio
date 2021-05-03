@@ -4,6 +4,9 @@
 // microcmsライブラリ
 gatsby-source-microcms
 
+// クロール
+gatsby-plugin-robots-txt
+
 // sass
 node-sass
 gatsby-plugin-sass

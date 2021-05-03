@@ -86,8 +86,15 @@
 
   @media only screen and (max-width: 500px) {
     .text {
+      width: 100%;
+      text-align: center;
+
       h1 {
         font-size: 2rem;
+      }
+
+      div {
+        text-align: left;
       }
     }
   }

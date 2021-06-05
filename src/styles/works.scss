@@ -5,9 +5,13 @@
 
   .eyecatch-wrap {
     overflow: hidden;
+    position: relative;
     height: 200px;
 
     img {
+      position: absolute;
+      top: 0;
+      left: 0;
       max-width: 500px;
     }
   }
@@ -27,6 +31,12 @@
     width: 100%;
     padding: 1rem 0;
 
+    .eyecatch-wrap {
+      img {
+        max-width: 800px;
+      }
+    }
+
     .content {
       min-height: auto;
     }
@@ -36,8 +46,22 @@
     width: 100%;
     padding: 1rem 0;
 
+    .eyecatch-wrap {
+      img {
+        max-width: 800px;
+      }
+    }
+
     .content {
       min-height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .eyecatch-wrap {
+      img {
+        max-width: 500px;
+      }
     }
   }
 }

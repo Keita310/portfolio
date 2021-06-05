@@ -22,6 +22,7 @@ const Works = ({ location, data }) => (
              <div className="card-img-top eyecatch-wrap">
                <ExternalImage
                  url={work.pc_eyecatch}
+                 default={true}
                />
              </div>
              <div className="card-body bg-light content">

@@ -37,6 +37,7 @@
   // ハンバーガーボタン
   .toggle-btn {
     position: relative;
+    top: 1px;
     width: 24px;
     height: 20px;
     cursor: pointer;
@@ -80,7 +81,7 @@
     justify-content: space-between;
     align-items: center;
     background: $main-key-color;
-    padding: .2rem 1.5rem;
+    padding: .5rem 1.5rem;
     border-bottom: .5rem solid #fff;
 
     a {

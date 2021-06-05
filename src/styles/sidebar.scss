@@ -37,8 +37,8 @@
   // ハンバーガーボタン
   .toggle-btn {
     position: relative;
-    width: 50px;
-    height: 44px;
+    width: 24px;
+    height: 20px;
     cursor: pointer;
     display: inline-block;
     transition: all .5s;
@@ -49,7 +49,7 @@
       position: absolute;
       left: 0;
       width: 100%;
-      height: 4px;
+      height: 2px;
       background-color: #FFF;
       border-radius: 4px;
       display: inline-block;
@@ -61,7 +61,7 @@
       }
 
       &:nth-child(2) {
-        top: 20px;
+        top: 8px;
       }
 
       &:nth-child(3) {
@@ -80,13 +80,13 @@
     justify-content: space-between;
     align-items: center;
     background: $main-key-color;
-    padding: .7rem 1.5rem;
+    padding: .2rem 1.5rem;
     border-bottom: .5rem solid #fff;
 
     a {
       font-family: 'Roboto Condensed', sans-serif;
       color: #fff;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
 
     label {
@@ -106,22 +106,17 @@
             background-color: #fff;
 
             &:nth-child(1) {
-              -webkit-transform: translateY(20px) rotate(-45deg);
-              transform: translateY(20px) rotate(-45deg);
+              transform: translateY(8px) rotate(-45deg);
             }
 
             &:nth-child(2) {
               left: 200%;
               opacity: 0;
-              -webkit-transform: translateY(10px);
-              transform: translateY(10px);
-              -webkit-animation: active-btn06-bar02 .8s forwards;
               animation: active-btn06-bar02 .8s forwards;
             }
 
             &:nth-child(3) {
-              -webkit-transform: translateY(-20px) rotate(45deg);
-              transform: translateY(-20px) rotate(45deg);
+              transform: translateY(-8px) rotate(45deg);
             }
 
             @-webkit-keyframes active-btn06-bar02 {
